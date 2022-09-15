@@ -46,6 +46,11 @@ public class TestMain {
         ae3.setRoles(new Role[]{new Accountant()});
         ae4.setRoles(new Role[]{new Instructor(),new Manager(),new SalesRepresentative()});
 
+        System.out.println("\n----------------------Performing role-----------------------------------");
+        ae1.findRole("instructor").doJob();
+
+        System.out.println("\n----------------------Adding intructors to course-----------------------------------");
+
         co1.addInstructor(ae1);
         co2.addInstructor(ae2);
         co2.addInstructor(ae3);

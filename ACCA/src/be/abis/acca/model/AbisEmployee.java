@@ -18,7 +18,7 @@ public class AbisEmployee extends Person {
         this.homeAddress = homeAddress;
     }
 
-    public AbisEmployee(String firstName, String lastName, int age, int startAge, double startSalary,double salary, Address homeAddress) {
+    public AbisEmployee(String firstName, String lastName, int age, int startAge, double startSalary, double salary, Address homeAddress) {
        this(firstName, lastName, age, salary, homeAddress);
        this.startAge=startAge;
        this.startSalary=startSalary;
@@ -114,4 +114,18 @@ public class AbisEmployee extends Person {
         }
         return false;
     }
+
+    public  Role findRole(String type){
+        Role foundRole =null;
+        for (Role r : roles){
+            if (r!=null) {
+                String roleType = r.getType();
+                if (roleType.equals(type)) {
+                    foundRole = r;
+                }
+            }
+        }
+        return foundRole;
+    }
+
 }
